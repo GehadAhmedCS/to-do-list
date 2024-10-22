@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Arima", system-ui;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #15263e, #15265e8c);
+}
+
+.digtal-clock{
+    
+    height: 100%;
+    border-radius: 20px;
+    background-color: #15263e77;
+    backdrop-filter: blur(80px);
+    color: #fff;
+    font-size: 50px;
+}
+
+.time span{
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+}
+.time span::after {
+    /* content: 'hours'; */
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+
+}
+
+#hrs::after{
+    content: 'HOUR';
+    
+   
+}
+#mins::after{
+    content: 'MINS';
+    
+   
+}
+#sec::after{
+    content: 'SEC';
+    
+   
+}
+
+.qout-main{
+    width: 70%;
+}
+.qout{
+    background-color: #15263e;
+    border-radius: 20px;
+    color: rgb(201, 198, 198);
+    letter-spacing: 1px;
+    
+}
+
+.qout::after,.qout::before{
+    content: '"';
+    
+}
+.auther{
+    position: relative;
+}
+.auther::before{
+    content: "";
+    width:35px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+}
+.auther-d{
+    background-color: #0e1a2be1;
+    color: rgb(201, 198, 198);
+}
+
+
+.note-content{
+
+    width: 100%;
+    min-height: 100px;
+    background-color: #fff;
+    border-radius: 20px;
+    outline: 0;
+    transition: .2s all ease-in-out;
+    position: relative;
+    padding-right: 40px;
+
+    margin-top: 15px;
+    padding: 20px;
+
+}
+.note-content img{
+    position: absolute;
+    width: 20px ;
+    height: 20px;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.note-content:focus{
+    box-shadow: 5px 0px 5px 1px rgb(33, 175, 175);
+
+}
+.appnote h3{
+    font-size: 1.7rem;
+}
+.clk-btn{
+
+    background: linear-gradient(  #15263e41 , #15263e );
+    color: #e4e4e4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.clk-btn img{
+    width: 30px ;
+    height: 30px;
+}
+
+.add-btn {
+    /* border: 2px solid red; */
+    border-radius: 13px;
+    background-color: #ff5945;
+    text-align: center;
+    color: rgb(230, 225, 225);
+    padding: 8px 18px;
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+.to-do-list {
+    border-radius: 20px;
+}
+
+.list-container{
+
+    margin-top: 30px;
+    /* background-color: #15263e; */
+}
+.list-container li{
+    list-style: none;
+    padding: 12px 35px;
+    position: relative;
+    cursor: pointer;
+    /* color: white; */
+}
+.list-container li::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(158, 157, 157);
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 5px;
+}
+.list-container li.cheacked{
+    color: gray;
+    text-decoration: line-through;
+
+
+}
+.list-container li.cheacked::before{
+    background-image:url(../assets/output-onlinepngtools.png) ;
+    border: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+}
+
+
+.list-container li span{
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: 0;
+    cursor: pointer;
+
+   
+   
+     text-align: center; 
+     line-height: 30px;
+     font-size: 22px;
+     
+    transition: all .3s ease-in-out;
+}
+
+.list-container li span:hover{
+    background-color: #15263e;
+    color: #fff;
+    
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+    .time span{
+        
+        margin: 0 0px;
+    }
+    .time{
+        width: 80%;
+    }
+    .digtal-clock{
+        width: 100%;
+    
+        font-size: 25px;
+    }
+    .time span::after {
+        /* content: 'hours'; */
+       
+        font-size: 14px;
+    
+    }
+    .qout-main{
+        width: 100%;
+    }
+    
+
+}
