@@ -54,14 +54,17 @@ var add_note=document.getElementById("add-note");
 var note_container=document.getElementById("note-container-d");
 var notes_content=document.querySelectorAll(".note-content")
 
-function showNotes(){
-    note_container.innerHTML=localStorage.getItem("notes");
-}
-showNotes();
+
 function updateStorage(){
     localStorage.setItem("notes",note_container.innerHTML);
 
 }
+
+
+function showNotes(){
+    note_container.innerHTML=localStorage.getItem("notes");
+}
+showNotes();
 
 
 add_note.addEventListener('click',()=>{
@@ -76,6 +79,9 @@ add_note.addEventListener('click',()=>{
     note_container.appendChild(inputBox).appendChild(trash);
 
     console.log('hello');
+
+    console.log(note_container.innerHTML);
+    
 
 
 
@@ -100,7 +106,7 @@ if (e.target.tagName==="IMG"){
     updateStorage()
 
 
-}else if(e.target.tagName==='P'){
+}else if(e.target.tagName==="P"){
 
      notes_content=document.querySelectorAll(".note-content")
 
@@ -115,11 +121,21 @@ if (e.target.tagName==="IMG"){
 
 
      })
+
     
     
 
 
 }
+
+
+document.addEventListener("keydown",(e)=>{
+    if(e.key==="Enter"){
+        document.execCommand("insertLineBreak");
+        e.preventDefault();
+    }
+
+})
 })
 
 // //////////////////to do-list
