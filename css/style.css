@@ -17,7 +17,7 @@ body{
 }
 .main{
     width: 100%;
-    height: 100%;
+    height: auto;
     background: linear-gradient(45deg, #15263e, #15265e8c);
 }
 
@@ -94,36 +94,41 @@ body{
     color: rgb(201, 198, 198);
 }
 
+/* ///////////////add-note//////////////////// */
 
-.note-content{
+.assets-note img{
 
-    width: 100%;
-    min-height: 100px;
-    background-color: #fff;
-    border-radius: 20px;
-    outline: 0;
-    transition: .2s all ease-in-out;
-    position: relative;
-    padding-right: 40px;
-
-    margin-top: 15px;
-    padding: 20px;
-
-}
-.note-content img{
-    position: absolute;
-    width: 20px ;
-    height: 20px;
-    bottom: 20px;
-    right: 20px;
-    display: block;
+    width: 30px;
+    padding: 3px;
     cursor: pointer;
-}
 
-.note-content:focus{
+}
+.assets-note div{
+    margin: 10px 10px;
+    transition: .3s all ease-in-out;
+    
+}
+.assets-note div:hover{
+    background-color: #afafb1;
+    border-radius: 20px;
+}
+.notes:focus{
     box-shadow: 5px 0px 5px 1px rgb(33, 175, 175);
 
 }
+
+[contenteditable='true']{
+    outline: 0;
+    border: 0;
+}
+#uploadedImage{
+    display: inline-block;
+    
+    max-width: 100px;
+}
+/* ////////////////////////// */
+
+
 .appnote h3{
     font-size: 1.7rem;
 }
